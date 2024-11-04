@@ -1,0 +1,123 @@
+/* تصميم القائمة الجانبية */
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+  z-index: 15;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+/* تصميم بطاقات الوجبات */
+.meal-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.category-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.meal-card {
+  position: relative;
+  width: 23%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.meal-card img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(253, 253, 253, 0.795);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #131212;
+  font-weight: bold;
+  transition: top 0.3s ease;
+}
+
+.meal-card:hover .overlay {
+  top: 0;
+}
+
+/* تصميم نموذج الاتصال */
+.contact-form {
+  display: none;
+  padding: 20px;
+}
+
+/* تصميم السبانر */
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Start hidden */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
